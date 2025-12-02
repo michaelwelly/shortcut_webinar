@@ -20,13 +20,16 @@ public class MyService {
      * - Иначе данные обрабатываются синхронно и результат оборачивается в уже завершённый CompletableFuture.
      */
     public CompletableFuture<String> execute(String input) {
+
         if (Boolean.TRUE.equals(serviceProperties.getAsyncEnabled())) {
             // Асинхронное выполнение
             return CompletableFuture.supplyAsync(() -> {
                 String data = externalApiClient.getData(input);
                 return "Async Processed: " + data;
             });
-        } else {
+        }
+
+        else {
             // Синхронное выполнение
             String data = externalApiClient.getData(input);
             return CompletableFuture.completedFuture("Sync Processed: " + data);
