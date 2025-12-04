@@ -1,4 +1,4 @@
-package ru.shortcut.app;
+package ru.shortcut.app.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
