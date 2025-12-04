@@ -15,7 +15,7 @@ public class MessageStatsService {
     public MessageStats calculate(List<Message> messages) {
 
         Map<String,Long> count = messages.stream()
-                .collect(Collectors.groupingBy(Message::getText,
+                .collect(Collectors.groupingBy(Message::getUser,
                         Collectors.counting()));
 
     String mostActive = count.entrySet().stream()
