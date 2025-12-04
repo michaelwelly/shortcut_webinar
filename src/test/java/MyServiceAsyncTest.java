@@ -5,7 +5,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.test.util.ReflectionTestUtils;
-import ru.shortcut.app.MyService;
+import ru.shortcut.app.service.MyService;
 import ru.shortcut.client.ExternalApiClient;
 import ru.shortcut.properties.ServiceProperties;
 
